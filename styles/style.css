@@ -1,0 +1,38 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --yellow: #FFC700;
+    --blackBg: #030304;
+    --green: #39CC06;
+
+}
+
+@font-face {
+    font-family: IrishGrover;
+    src: url(/assets/fonts/IrishGrover-Regular.ttf);
+}
+
+@font-face {
+    font-family: Poppins-Regular;
+    src: url(/assets/fonts/Poppins-Regular\(Normal\).ttf);
+}
+
+@font-face {
+    font-family: Poppins-Fina;
+    src: url(/assets/fonts/Poppins-Thin\(Fina\).ttf);
+}
+
+
+.container-grid{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+body{
+    background-color: var(--blackBg);
+}
+
