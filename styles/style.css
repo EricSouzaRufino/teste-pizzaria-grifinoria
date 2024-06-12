@@ -35,4 +35,14 @@
 body{
     background-color: wheat;
 }
-
+.cards {
+    flex-direction: row;
+    display: flex;
+    width: 1858px;
+    height: 830px;
+    color: #ffffff;
+}
+.card1 {
+    width: 546px;
+    height: 668px;
+}
