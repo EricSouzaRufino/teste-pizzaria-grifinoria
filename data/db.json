@@ -1,6 +1,115 @@
 {
   "pizzas": [
-    {}
+    {
+      "id": "1",
+      "nome": "Avadakedavra",
+      "recheio": "Massa grossa, molho de tomate, mussarela, tomate cereja, manjerição, gorgonzola, borda de catupiry.",
+      "imagem": "assets/images/pizza-avadakedavra.png",
+      "preço": 29.99
+    },
+    {
+      "id": "2",
+      "nome": "Alohomora",
+      "recheio": "Massa grossa, molho de tomate, mussarela, manjericão.",
+      "imagem": "assets/images/pizza-alohomora.png",
+      "preço": 29.99
+    },
+    {
+      "id": "3",
+      "nome": "Estupefaça",
+      "recheio": "Massa grossa, molho de tomate, mussarela, tomate cereja e palmitos.",
+      "imagem": "assets/images/pizza-estupefaça.png",
+      "preço": 39.99
+    },
+    {
+      "id": "4",
+      "nome": "Expectopatronum",
+      "recheio": "Massa grossa, molho de tomate, mussarela, e calabresa sem cebola.",
+      "imagem": "assets/images/pizza-expectopatronum.png",
+      "preço": 39.99
+    },
+    {
+      "id": "5",
+      "nome": "Petrificus",
+      "recheio": "Massa fina, molho de tomate, mussarela, cogumelos(champignon), rodelas de tomate e borda de catupiry.",
+      "imagem": "assets/images/pizza-petrificus.png",
+      "preço": 49.99
+    },
+    {
+      "id": "6",
+      "nome": "Wingardiumleviosa",
+      "recheio": "Massa fina, molho de tomate, dois queijo,rodelas de tomate e borda de catupiry.",
+      "imagem": "assets/images/pizza-wingardiumleviosa.png",
+      "preço": 49.99
+    }
+  ],
+  "massa": {
+    "Massa Fina": 8,
+    "Massa Grossa": 7
+  },
+  "borda": {
+    "Muçarela": 3,
+    "Catupiry": 6,
+    "Cheddar": 6,
+    "Sem Borda": 0
+  },
+  "ingredientes": {
+    "Muçarela": 3,
+    "Calabresa": 3,
+    "Frango": 3.5,
+    "Presunto": 2,
+    "Catupiry": 2.5,
+    "Tomate": 1,
+    "Milho": 1,
+    "Ervilha": 1,
+    "Chedder": 2.5,
+    "Champignon": 4,
+    "Cebola": 1,
+    "Azeitona": 1,
+    "Atum": 3,
+    "Alho frito": 1,
+    "Brocólis": 2,
+    "Acelga": 1,
+    "Escarola": 1,
+    "Peperone": 3.5,
+    "Manjericão": 1,
+    "Gorgonzola": 3,
+    "Tomate Cereja": 2
+  },
+  "tamanho": {
+    "4 pedaços": 15,
+    "8 pedaços": 20
+  },
+  "users": [
+    {
+      "id": "14bb",
+      "username": "Eric",
+      "email": "ericfzao@gmail.com",
+      "password": "eric"
+    },
+    {
+      "id": "40aa",
+      "username": "iara",
+      "email": "iara@gmail.com",
+      "password": "iara"
+    },
+    {
+      "id": "65f0",
+      "username": "Guilherme",
+      "email": "guilherme@gmail.com",
+      "password": "gui"
+    },
+    {
+      "id": "a704",
+      "username": "Eric",
+      "email": "eric@gmail.com",
+      "password": "dev"
+    },
+    {
+      "id": "78e6",
+      "username": "Joao Amorim Souza",
+      "email": "joao@souza.com",
+      "password": "joao"
+    }
   ]
-
 }

@@ -8,51 +8,345 @@
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/carrinho.css">
     <link rel="stylesheet" href="styles/login.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <script defer src="scripts/script.js"></script>
 </head>
 
 <body>
-    <header>
+
+    <header class="header-style">
+        <nav class="container-grid">
+            <img src="assets/images/logo.png" alt="">
+
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#cardapio">Cardápio</a></li>
+                <li><a href="#sobrenos">Sobre Nós</a></li>
+            </ul>
+            <div>
+                <img id="userIcon" src="assets/icons/icon-user.svg" alt="">
+                <div id="userGreeting">
+                    <span id="loggedInUser"></span>
+                </div>
+                <img id="cart-icon" src="assets/icons/icon-shopping-cart.svg" alt="">
+            </div>
+        </nav>
     </header>
+
     <main>
+        <section id="inicio" class="banner-style container-grid">
+            <article>
+                <h1>
+                    Mágica gastronômica
+                </h1>
+                <p>
+                    Experimente a magia em cada pedaço de pizza como se estivesse saboreando um feitiço de Hogwarts.
+                </p>
+                <div>
+                    <button onclick="scrollToSection('monte-pizza')">Monte seu pedido</button>
+                    <button onclick="scrollToSection('cardapio')">Cardápio</button>
+                </div>
+            </article>
+            <img src="assets/images/pizzaflutuando 1.png" alt="">
+        </section>
+
+        <section id="cardapio" class="section-cardapio container-grid">
+            <h1>As mais pedidas de Hogwarts!</h1>
+
+            <section class="section-cardapio__cards">
+                <img id="seta-esquerda" src="assets/icons/seta-esquerda.svg" alt="">
+
+                <div id="card-container" class="carousel">
+                </div>
+
+                <img id="seta-direita" src="assets/icons/seta-direita.svg" alt="">
+
+            </section>
+
+            <section id="monte-pizza" class="monte-pizza container-grid">
+                <h1>Simule sua pizza</h1>
+                <section class="section3">
+                    <section class="lista">
+                        <h4>Selecione a massa/borda</h4>
+                        <input id="massa" class="campo-input" placeholder="Selecione um tipo de massa" list="browsers">
+                        <datalist id="browsers">
+                            <option value="Massa Fina">
+                            <option value="Massa Grossa">
+                        </datalist>
+            
+                        <input id="borda" class="campo-input" placeholder="Selecione um tipo de borda" list="browsers1">
+                        <datalist id="browsers1">
+                            <option value="Muçarela">
+                            <option value="Catupiry">
+                            <option value="Cheddar">
+                            <option value="Sem Borda">
+                        </datalist>
+            
+                        <h4>Selecione até 4 ingredientes</h4>
+                        <input class="ingredientes campo-input" placeholder="Selecione 1º ingrediente" list="browsers2">
+                        <input class="ingredientes campo-input" placeholder="Selecione 2º ingrediente" list="browsers2">
+                        <input class="ingredientes campo-input" placeholder="Selecione 3º ingrediente" list="browsers2">
+                        <input class="ingredientes campo-input" placeholder="Selecione 4º ingrediente" list="browsers2">
+            
+                        <datalist id="browsers2">
+                            <option value="Muçarela">
+                            <option value="Calabresa">
+                            <option value="Frango">
+                            <option value="Presunto">
+                            <option value="Catupiry">
+                            <option value="Tomate">
+                            <option value="Milho">
+                            <option value="Ervilha">
+                            <option value="Cheddar">
+                            <option value="Champignon">
+                            <option value="Cebola">
+                            <option value="Azeitona">
+                            <option value="Atum">
+                            <option value="Alho frito">
+                            <option value="Brócolis">
+                            <option value="Acelga">
+                            <option value="Escarola">
+                            <option value="Pepperoni">
+                            <option value="Manjericão">
+                            <option value="Gorgonzola">
+                            <option value="Tomate Cereja">
+                        </datalist>
+            
+                        <h4>Selecione o tamanho</h4>
+                        <div id="tamanho">
+                            <input id="tamanho-input" class="campo-input" placeholder="Selecione o tamanho da pizza" list="browsers3">
+                            <datalist id="browsers3">
+                                <option value="4 pedaços">
+                                <option value="8 pedaços">
+                            </datalist>
+                        </div>
+            
+                        <section class="botão">
+                            <div>
+                                <button class="carrinho" id="carrinho">
+                                    Comprar
+                                    <img src="./assets/icons/icon-shopping-cart.svg" alt="">
+                                </button>
+                            </div>
+                            <div id="total-price" class="total-price">Total: R$0,00</div>
+                        </section>
+                    </section>
+                    <figure>
+                        <img src="./assets/images/pizzaiolo.png" alt="">
+                    </figure>
+                </section>
+            </section>
+
+            <section id="sobrenos" class="section-sobrenos">
+                <h1>Sobre La Grifinória Pizzeria</h1>
+
+                <p>Um grupo de amigos apaixonados em pizzas e na saga Harry Potter,<br> decidiram se juntar e fundaram
+                    uma
+                    pizzaria temática e <br> inspirada em Hogwarts, a La Grifinória Pizzeria.</p>
+
+                <h2>Conheça um pouco sobre o nosso espaço logo abaixo:</h2>
+
+                <section class="slider">
+                    <div class="slider-content">
+
+                        <input type="radio" name="btn-radio" id="radio1">
+                        <input type="radio" name="btn-radio" id="radio2">
+                        <input type="radio" name="btn-radio" id="radio3">
+                        <input type="radio" name="btn-radio" id="radio4">
+
+                        <div class="slide-box primeiro">
+                            <img class="img-desktop" src="./assets/images/foto1pizzaria.jpg" alt="slide1">
+                        </div>
+
+                        <div class="slide-box">
+                            <img class="img-desktop" src="./assets/images/foto2pizzaria.jpg" alt="slide2">
+                        </div>
+
+                        <div class="slide-box">
+                            <img class="img-desktop" src="./assets/images/foto3pizzaria.jpg" alt="slide3">
+                        </div>
+
+                        <div class="slide-box">
+                            <img class="img-desktop" src="./assets/images/foto4pizzaria.jpg" alt="slide4">
+                        </div>
+
+                        <div class="auto-btn1"></div>
+                        <div class="auto-btn2"></div>
+                        <div class="auto-btn3"></div>
+                        <div class="auto-btn4"></div>
+
+                        <div class="nav-manual">
+                            <label for="radio1" class="manual-btn"></label>
+                            <label for="radio2" class="manual-btn"></label>
+                            <label for="radio3" class="manual-btn"></label>
+                            <label for="radio4" class="manual-btn"></label>
+                        </div>
+
+
+                    </div>
+                </section>
+            </section>
     </main>
-    
-    <footer>
 
-        <img src="./assets/images/logo.png" alt="">
-        <p> Horario de funcionamento </p>
-        <h1> De terça-feira a Quinta-feira das 18:00 as 23:00 hrs </h1>
-        <p> De Sexta à Domingo das 16:00 às 00:30 hrs</p>
-        <p>Feriados das 14:00 às 00:30 </p>
-        <h1>
-            Telefones
-            (11)4002-8922
-            (11)95231-0981
-        </h1>
-        <p><img src="./assets/icons/icon-telefone.svg" alt=""></p>
-        <p><img src="./assets/icons/icon-whatsapp.svg" alt=""></p>
+    <footer class="footer-style">
+        <section class="footer-style_1 container-grid">
+            <figure>
+                <img id="logo" src="assets/images/logo.png" alt="">
+            </figure>
 
-        <h1> Endereço:
-            Rua:Moreira de Godói, 23 - Ipiranga, São-Paulo - SP, 04266-060
-        </h1>
+            <article>
+                <h1>Horário de Funcionamento</h1>
+                <p>Terça-Feira a Quinta-Feira: 18:00 às 23:00<br>
+                    Sexta à Domingo: 16:00 às 00:30<br>
+                    Feriados: 14:00 às 00:30
+                </p>
+            </article>
+            <div>
+                <h1>Formas de Pagamentos</h1>
 
-        <img src="./assets/images/forma-pagamentos 1.png" alt="Pagamento">
+                <img id="formas" src="assets/images/forma-pagamentos 1.png" alt="">
+                <figure>
+                    <img src="assets/icons/icon-pix.svg" alt="">
+                    <img src="assets/icons/money.svg" alt="">
+                </figure>
+            </div>
 
-        <h2>
-            Nos acompanhe nas redes sociais
-            <img src="./assets/icons/icon-facebook.svg" alt="">
-            <img src="./assets/icons/icon-instagram.svg" alt="">
-            <img src="./assets/icons/icon-twitter.svg" alt="">
+        </section>
+        <section class="footer-style_2 container-grid">
+            <article>
+                <h1>Telefones</h1>
+                <p>(11) 4002-8922 <span><img src="assets/icons/icon-telefone.svg" alt=""></span>
+                </p>
+                <p>(11) 95231-0981 <span><img src="assets/icons/icon-whatsapp.svg" alt=""></span></p>
 
-        </h2>
-        <!-- <h1>
-            <img src="./assets/images/background-image-footer.png" alt="">
-        </h1> -->
+            </article>
 
-        <p>
-            <img src="./assets/images/site_confiavel.png" alt="">
-        </p>
+            <article>
+                <h1>Endereço</h1>
+                <p>Rua Moreira de Godói, 23 - Ipiranga, São Paulo - SP, 04266-060</p>
 
+            </article>
+
+        </section>
+        <section class="footer-style_3">
+            <p>&copy;Todos direitos reservados - La Grifinoria 2024</p>
+        </section>
     </footer>
+    <section id="loginModal" class="modal-login">
+        <span class="close">&times;</span>
+
+        <div class="container">
+            <figure>
+                <img class="logoLogin" src="./assets/images/logo.png" alt="logo">
+            </figure>
+            <div class="form-container">
+                <h2>Login</h2>
+                <!-- Formulário de Login -->
+                <form id="form-login" action="#" method="POST" class="form-login">
+                    <input type="text" placeholder="Digite o usuário" required class="inputlc" id="login-username">
+                    <input type="password" placeholder="Digite a senha" required class="inputlc" id="login-password">
+                    <button type="submit">Entrar</button>
+                </form>
+            </div>
+
+            <div class="form-container">
+                <h2>É novo? Cadastre-se abaixo</h2>
+                <!-- Formulário de Cadastro -->
+                <form id="form-signup" action="#" method="POST" class="form-signup">
+                    <input type="text" placeholder="Insira um usuário" required class="inputlc" id="signup-username">
+                    <input type="email" placeholder="Insira um email" required class="inputlc" id="signup-email">
+                    <input type="password" placeholder="Insira uma senha" required class="inputlc" id="signup-password">
+                    <input type="password" placeholder="Confirme sua senha" required class="inputlc"
+                        id="signup-password-confirm">
+                    <button type="submit">Cadastrar</button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+    <section id="cart" class="modal-carrinho">
+        <button id="close-cart">X</button>
+
+        <section class="menu container-grid">
+            <h1>Meu Pedido</h1>
+            <!-- <button id="cart-icon"> -->
+                <i class="bi bi-cart4"></i>
+            <!-- </button> -->
+        </section>
+        <section class="meuPedido container-grid">
+            <div>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Item</td>
+                            <td>Pizza</td>
+                            <td>Valor</td>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+</div>
+        
+        <section class="total">
+            <div class="table2">
+                <table id="carrinho-table">
+                    <tbody>
+                        <tr>
+                            <td>Total</td>
+                            <td>R$ 0,00</td>
+                        </tr>
+                        <tr>
+                            <td>Taxa de entrega</td>
+                            <td class="gratis">Grátis</td>
+                        </tr>
+                        <tr>
+                            <td><b>Subtotal</b></td>
+                            <td><b>R$ 0,00</b></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <div class="button3">
+            <button class="cancelar" id="cancel-button">Cancelar</button>
+            <button class="finalizar" id="finalizar-compra-button">Finalizar Compra</button>
+        </div>
+    </section>
+    <div id="finalizarModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <section class="finalizar-cadastro">
+                <div class="h1">
+                    <h1>Retirada no Local</h1>
+                </div>
+                
+                <div class="dados">
+                    <h3>Usuário</h3>
+                    <p>Maria José</p>
+    
+                    <h3>E-mail</h3>
+                    <p>mariajose@gmail.com</p>
+                </div>
+    
+                <h2>Atendimento no local</h2>
+    
+                <div class="adress">   
+                    <h4>O pedido será retirado no balcão, na unidade:</h4>
+                    <p>Pizzeria La Grifinória (Rua Moreira de Godói, 23 - Ipiranga, São Paulo - SP, 04266-060)</p>
+                </div>
+    
+                <div class="enviar">
+                    <span id="total-amount">Total: R$</span>
+                    <button id="confirmar-pedido-button">
+                        <i class="bi bi-check"></i>
+                        <h5>Confirmar pedido</h5>
+                    </button>
+                </div>
+            </section>
+        </div>
+    </div>
+    
 </body>
 
 </html>
